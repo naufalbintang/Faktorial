@@ -19,6 +19,6 @@ while True:
 
     print(f"{data_list[0]}! = {hasil}")
     
-    exit = input("Apakah ingin keluar (y/n)? ")
+    quit_program = input("Apakah ingin keluar (y/n)? ")
     if exit.lower() == "y":
         break

@@ -1,24 +1,21 @@
-while True:
-    angka = int(input("Masukkan angka: "))
-    data_list = []
+def faktorial(angka):
+    '''fungsi untuk menghitung faktorial'''
     hasil = 1
-
-    if angka != 0:
-        while True:
-            data_list.append(angka)
-            angka -= 1
-            
-            if angka == 0:
-                break
-            
-        for i in data_list:
-            hasil = hasil * i 
-        
-    else:
-        print("Masukkan angka yang valid")
-
-    print(f"{data_list[0]}! = {hasil}")
+    for i in range(1, angka + 1):
+        hasil *= i
+    return hasil
     
-    quit_program = input("Apakah ingin keluar (y/n)? ")
-    if exit.lower() == "y":
+    
+while True:
+    angka = int(input('Masukkan angka: '))
+    if angka != 0:
+        print(f'{angka}! = {faktorial(angka):,.0f}')
+    else:
+        print('Masukkan angka yang valid!')
+    
+    # break
+    isDone = input('Apakah sudah selesai (y/n)?')
+    if isDone.lower() == 'y':
         break
+    else:
+        None
